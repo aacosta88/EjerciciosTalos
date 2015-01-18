@@ -1,0 +1,22 @@
+package com.talos.invertedindex;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.talos.invertedindex.datastructure.Index;
+
+public class Indexer {
+	
+	private Map<String, List<Index>> fullInvertedIndex = null;
+	
+	public Map<String, List<Index>> index(List<String> documentList) throws Exception{
+		if (documentList != null && documentList.size() > 0){
+			
+		}else {
+			throw new Exception("Document list can't be empty");
+		}
+		return new HashMap<String, List<Index>>();
+	}
+
+}

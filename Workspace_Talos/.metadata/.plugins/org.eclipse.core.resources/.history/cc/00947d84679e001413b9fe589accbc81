@@ -1,0 +1,28 @@
+package com.talos.invertedindex;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.talos.invertedindex.datastructure.Index;
+
+
+public class InvertedIndex {
+	
+	List<String> documentList;
+	private Map<String, List<Index>> fullInvertedIndex = new HashMap<String, List<Index>>();
+    
+	
+	public void setDocumentList(List<String> documentList){
+		this.documentList = documentList;
+	}
+	
+	public String[] get(){
+		
+	}
+	
+	public static void main(){
+		
+	}
+	
+}

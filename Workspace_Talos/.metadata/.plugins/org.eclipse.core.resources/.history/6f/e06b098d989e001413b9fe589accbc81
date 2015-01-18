@@ -1,0 +1,73 @@
+package com.talos.invertedindex;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import com.talos.invertedindex.datastructure.Index;
+
+public class PhraseSearch {
+	
+	public String[] search(String phrase, Map<String, List<Index>> fullInvertedIndex, String[] documentList) throws Exception{
+		if (phrase != null && !phrase.trim().equals("")){
+			List<List<Index>> ocurrenceList = obtainOccurrences(phrase, fullInvertedIndex);
+			int[] intersectionList;
+			if (!ocurrenceList.isEmpty()){
+				intersectionList = obtainIntersectionList(ocurrenceList);
+			}
+		}else {
+			throw new Exception("The phrase can't be empty");
+		}
+		return new String[3];
+	}
+	
+	private Integer[] obtainIntersectionList(List<List<Index>> ocurrenceList) {
+		if (ocurrenceList.size() == 1){
+			return (Integer[])ocurrenceList.get(0).toArray();
+		}
+		List<Integer> firstIndex = ocurrenceList.get(0);
+		for (List<Integer> ){
+			
+		}
+		return new int[2];
+	}
+
+	private Map<String, List<Index>> fullInvertedIndex obtainOccurrences(String phrase, Map<String, List<Index>> fullInvertedIndex){
+		String[] splitPhrase = phrase.split(" ");
+		List<List<Index>> ocurrenceList = new ArrayList<List<Index>>();
+		for (String word : splitPhrase){
+			List<Index> indexList = fullInvertedIndex.get(word);
+			if (indexList != null){
+				ocurrenceList.add(indexList);
+			}
+		}
+		return ocurrenceList;
+	}
+//	
+//	private boolean isThereConsecutive(List<DataIndex> sortDataIndex, Index currentIndex, int pointer){
+//		boolean isThereConsecutive = t;
+//		for (int i=pointer+1; i<sortDataIndex.size()+1; i++){
+//			List<Index> indexList = sortDataIndex.get(i).getIndexList();
+//			for (Index index : indexList){
+//				if (currentIndex.getIdDocument() == index.getIdDocument() && 
+//					currentIndex.getWordLocation()+1 == index.getWordLocation()){
+//					isThereConsecutive = true;
+//				}
+//			}
+//		}
+//		return isThereConsecutive;
+//	}
+	
+//	private List<DataIndex> sortInvertedIndex(Map<String, List<Index>> fullInvertedIndex, String phrase){
+//		List<DataIndex> sortDataIndex = new ArrayList<DataIndex>();
+//		for (String word : phrase.split(" ")){
+//			List<Index> listIndex = fullInvertedIndex.get(word);
+//			if (listIndex != null){
+//				DataIndex dataIndex = new DataIndex(word, listIndex);
+//				sortDataIndex.add(dataIndex);
+//			}
+//		}
+//		return sortDataIndex;
+//	}
+
+}

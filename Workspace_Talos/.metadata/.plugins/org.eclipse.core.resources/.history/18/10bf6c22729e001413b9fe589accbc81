@@ -1,0 +1,37 @@
+package com.talos.invertedindex;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.talos.invertedindex.datastructure.Index;
+
+
+public class InvertedIndex {
+	
+	private String[] phraseList;
+	private Map<String, List<Index>> fullInvertedIndex = null;
+	
+	public InvertedIndex(String[] phraseList) throws Exception{
+		this.phraseList = phraseList;
+		Indexer indexer = new Indexer();
+		fullInvertedIndex = indexer.index(phraseList);
+	}
+	
+	public String[] get(String phrase) throws Exception{
+
+		return new String[3]; 
+	}
+	
+	public static void main (String[] argus) throws Exception{
+		String[] data = new String[]{ 
+				 "it is what it is", 
+				 "what is it", 
+				 "it is a banana"
+				    }; 
+		
+		InvertedIndex i = new InvertedIndex(data);
+	}
+	
+	
+}

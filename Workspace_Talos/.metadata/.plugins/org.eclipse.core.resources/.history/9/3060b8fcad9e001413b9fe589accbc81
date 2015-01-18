@@ -1,0 +1,15 @@
+package com.talos.invertedindex;
+
+
+/**
+ * Unit test for simple App.
+ */
+public class InvertedIndexTest {
+	
+
+	@Test
+	public void sumaPositivos() {
+		
+	}
+
+}

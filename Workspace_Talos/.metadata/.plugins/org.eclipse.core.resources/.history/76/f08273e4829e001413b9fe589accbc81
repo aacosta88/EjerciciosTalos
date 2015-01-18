@@ -1,0 +1,34 @@
+package com.talos.invertedindex;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.talos.invertedindex.datastructure.Index;
+
+public class PhraseSearch {
+	
+	public String[] search(String phrase, Map<String, List<Index>> fullInvertedIndex, String[] documentList) throws Exception{
+		if (phrase != null && !phrase.trim().equals("")){
+//			String[] splitPhrase = phrase.split(" ");
+//			for (int i=0; i<splitPhrase.length; i++){
+//				List<Index> listIndex = fullInvertedIndex.get(splitPhrase[i]);
+//				for (int j=0; j<listIndex.size();j++){
+//					
+//				}
+//			}
+		}else {
+			throw new Exception("The phrase can't be empty");
+		}
+		return new String[3];
+	}
+	
+	private Map<String, List<Index>> sortInvertedIndex(Map<String, List<Index>> fullInvertedIndex, String phrase){
+		Map<String, List<Index>> sortInvertedIndex = new HashMap<String, List<Index>>();
+		for (String word : phrase.split(" ")){
+			
+		}
+		return sortInvertedIndex;
+	}
+
+}

@@ -1,0 +1,46 @@
+package com.talos.invertedindex;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+
+/**
+ * Unit test for simple App.
+ */
+public class InvertedIndexTest {
+	
+
+	@Test
+	public void searchOnlyOneWord () throws Exception {
+		String[] data = new String[]{ 
+				 "A brilliant, festive study of JS Bach uses literature and painting to illuminate his 'dance-impregnated' music, writes Peter Conrad", 
+				 "Fatima Bhutto on Malala Yousafzai's fearless and still-controversial memoir", 
+				 "Grisham's sequel to A Time to Kill is a solid courtroom drama about racial prejudice marred by a flawless white hero, writes John O'Connell", 
+				 "This strange repackaging of bits and pieces does the Man Booker winner no favours, says Sam Leith", 
+				 "Another book with music related content" 
+				    };
+		
+		InvertedIndex invertedIndex = new InvertedIndex(data);
+		String[] results = invertedIndex.get("music");
+		assertTrue(results[0] == "A brilliant, festive study of JS Bach uses literature and painting to illuminate his 'dance-impregnated' music, writes Peter Conrad");
+		assertTrue(results[1] == "Another book with music related content");
+	}
+	
+	@Test
+	public void searchAphrase () throws Exception {
+		String[] data = new String[]{ 
+				 "A brilliant, festive study of JS Bach uses literature and painting to illuminate his 'dance-impregnated' music, writes Peter Conrad", 
+				 "Fatima Bhutto on Malala Yousafzai's fearless and still-controversial memoir", 
+				 "Grisham's sequel to A Time to Kill is a solid courtroom drama about racial prejudice marred by a flawless white hero, writes John O'Connell", 
+				 "This strange repackaging of bits and pieces does the Man Booker winner no favours, says Sam Leith", 
+				 "Another book with music related content" 
+				    };
+		
+		InvertedIndex invertedIndex = new InvertedIndex(data);
+		String[] results = invertedIndex.get("music");
+		assertTrue(results[0] == "A brilliant, festive study of JS Bach uses literature and painting to illuminate his 'dance-impregnated' music, writes Peter Conrad");
+		assertTrue(results[1] == "Another book with music related content");
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.talos.invertedindex;
+
+import java.util.List;
+import java.util.Map;
+
+import com.talos.invertedindex.datastructure.Index;
+
+
+public class InvertedIndex {
+	
+	private Map<String, List<Index>> nombreMap = null;
+    
+	public void DocumentList(){
+		
+	}
+	
+}

@@ -1,0 +1,13 @@
+package com.talos.invertedindex;
+
+public class PhraseSearch {
+	
+	public void search(String phrase) throws Exception{
+		if (phrase != null && !phrase.trim().equals("")){
+			
+		}else {
+			throw new Exception("The phrase can't be empty");
+		}
+	}
+
+}

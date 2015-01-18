@@ -1,0 +1,11 @@
+package com.talos.invertedindex.util;
+
+import java.util.List;
+
+public class ArrayFunction {
+	
+	public static List<Integer> deleteDuplictedInteger(List<Integer> integerList){
+		
+	}
+
+}

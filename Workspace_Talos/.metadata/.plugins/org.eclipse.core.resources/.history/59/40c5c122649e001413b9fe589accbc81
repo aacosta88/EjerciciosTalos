@@ -1,0 +1,12 @@
+package com.talos.invertedindex;
+
+
+public class InvertedIndex {
+	
+	private Map<Integer, String> nombreMap = new HashMap<Integer, String>(); 
+    
+	public void DocumentList(){
+		
+	}
+	
+}

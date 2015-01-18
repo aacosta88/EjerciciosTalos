@@ -1,0 +1,10 @@
+package com.talos.invertedindex;
+
+
+public class InvertedIndex {
+    
+	public void DocumentList(){
+		
+	}
+	
+}

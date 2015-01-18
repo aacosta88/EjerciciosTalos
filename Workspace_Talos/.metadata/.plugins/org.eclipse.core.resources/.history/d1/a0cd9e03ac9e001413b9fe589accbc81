@@ -1,0 +1,16 @@
+package com.talos.invertedindex.util;
+
+import java.util.HashSet;
+import java.util.List;
+
+public class ArrayFunction {
+	
+	public static List<Integer> deleteDuplictedInteger(List<Integer> integerList){
+		HashSet<String> hs = new HashSet<String>();
+		hs.addAll(lista);
+		lista.clear();
+		lista.addAll(hs);
+		return lista;
+	}
+
+}

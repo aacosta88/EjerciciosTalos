@@ -1,0 +1,34 @@
+package com.talos.invertedindex.datastructure;
+
+public class Index {
+	
+	private int idDocument;
+	private int wordLocation;
+	
+	public Index(int idDocument, int wordLocation){
+		this.idDocument = idDocument;
+		this.wordLocation = wordLocation;
+	}
+	
+	public int getIdDocument() {
+		return idDocument;
+	}
+	
+	public void setIdDocument(int idDocument) {
+		this.idDocument = idDocument;
+	}
+	
+	public int getWordLocation() {
+		return wordLocation;
+	}
+	
+	public void setWordLocation(int wordLocation) {
+		this.wordLocation = wordLocation;
+	}
+	
+	@Override
+	public String toStrig(){
+		return "idDocument" + idDocument +" wordLocation" + wordLocation; 
+	}
+
+}

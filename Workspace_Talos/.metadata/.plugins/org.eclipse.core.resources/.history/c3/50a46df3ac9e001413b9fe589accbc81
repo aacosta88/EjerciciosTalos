@@ -1,0 +1,26 @@
+package com.talos.invertedindex.util;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+
+public class ArrayFunction {
+	
+	public static List<String> deleteDuplictedInteger(ArrayList<String> integerList){
+		HashSet<String> hs = new HashSet<String>();
+		hs.addAll(integerList);
+		integerList.clear();
+		integerList.addAll(hs);
+		return integerList;
+	}
+	
+	public ArrayList<String> uniqueSinOrdenar(ArrayList<String> lista) {
+
+		HashSet<String> hs = new HashSet<String>();
+		hs.addAll(lista);
+		lista.clear();
+		lista.addAll(hs);
+		return lista;
+		}
+
+}

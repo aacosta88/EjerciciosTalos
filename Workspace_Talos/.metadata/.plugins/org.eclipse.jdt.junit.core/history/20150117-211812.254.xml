@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="InvertedIndexTest" project="inverted-index" tests="6" started="6" failures="0" errors="0" ignored="0">
+  <testsuite name="com.talos.invertedindex.InvertedIndexTest" time="0.08">
+    <testcase name="searchWithNoPhrase" classname="com.talos.invertedindex.InvertedIndexTest" time="0.04"/>
+    <testcase name="searchWithNoResult" classname="com.talos.invertedindex.InvertedIndexTest" time="0.012"/>
+    <testcase name="deleteEspecialCharacter" classname="com.talos.invertedindex.InvertedIndexTest" time="0.001"/>
+    <testcase name="searchOnlyOneWord" classname="com.talos.invertedindex.InvertedIndexTest" time="0.014"/>
+    <testcase name="searchWithNoData" classname="com.talos.invertedindex.InvertedIndexTest" time="0.001"/>
+    <testcase name="searchAphrase" classname="com.talos.invertedindex.InvertedIndexTest" time="0.012"/>
+  </testsuite>
+</testrun>

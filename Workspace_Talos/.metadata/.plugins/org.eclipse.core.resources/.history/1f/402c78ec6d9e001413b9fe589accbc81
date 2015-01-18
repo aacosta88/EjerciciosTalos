@@ -1,0 +1,45 @@
+package com.talos.invertedindex;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.talos.invertedindex.datastructure.Index;
+
+public class Indexer {
+	
+	private Map<String, List<Index>> fullInvertedIndex = new HashMap<String, List<Index>>();
+	
+	public Map<String, List<Index>> index(List<String> phraseList) throws Exception{
+		if (phraseList != null && phraseList.size() > 0){
+			
+			for (int indexPhrase=0; indexPhrase<phraseList.size(); indexPhrase++){
+				
+				String[] splitPhrase = phraseList.get(indexPhrase).split(" ");
+				
+				for (int indexWord=0; indexWord<splitPhrase.length; indexWord++){
+					String word = splitPhrase[indexWord];
+					if (fullInvertedIndex.get(word) == null){
+						fullInvertedIndex.put(word, generateIndexList(indexPhrase, indexWord));
+					}else {
+						
+					}
+				}
+			}
+			
+		}else {
+			throw new Exception("Document list can't be empty");
+		}
+		return new HashMap<String, List<Index>>();
+	}
+	
+	private List<Index> generateIndexList(int indexPhrase, int indexWord){
+		Index index = new Index(indexPhrase, indexWord);
+		List<Index> indexList = new ArrayList<Index>();
+		indexList.add(index);
+		return indexList;
+	}
+	
+
+}

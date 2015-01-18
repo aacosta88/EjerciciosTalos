@@ -1,0 +1,10 @@
+package com.talos.invertedindex.datastructure;
+
+import java.util.ArrayList;
+
+public class DataIndex {
+	
+	private String word;
+	private List<Index> indexList = new ArrayList<Index>();
+
+}

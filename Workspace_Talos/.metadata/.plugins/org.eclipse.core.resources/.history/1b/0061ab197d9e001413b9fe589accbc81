@@ -1,0 +1,24 @@
+package com.talos.invertedindex;
+
+import java.util.List;
+import java.util.Map;
+
+import com.talos.invertedindex.datastructure.Index;
+
+public class PhraseSearch {
+	
+	public String[] search(String phrase, Map<String, List<Index>> fullInvertedIndex, String[] documentList) throws Exception{
+		if (phrase != null && !phrase.trim().equals("")){
+			
+			List<Index> listIndex = fullInvertedIndex.get(word);
+			if (listIndex != null){
+				
+			}
+			
+		}else {
+			throw new Exception("The phrase can't be empty");
+		}
+		return new String[3];
+	}
+
+}

@@ -1,0 +1,20 @@
+package com.talos.invertedindex;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.talos.invertedindex.datastructure.Index;
+
+public class Indexer {
+	
+	public Map<String, List<Index>> index(List<String> documentList){
+		if (documentList != null && documentList.size() > 0){
+			
+		}else {
+			throw Exception();
+		}
+		return new HashMap<String, List<Index>>();
+	}
+
+}

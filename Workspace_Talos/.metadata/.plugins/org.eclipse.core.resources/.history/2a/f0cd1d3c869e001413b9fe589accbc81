@@ -1,0 +1,52 @@
+package com.talos.invertedindex;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import com.talos.invertedindex.datastructure.DataIndex;
+import com.talos.invertedindex.datastructure.Index;
+
+public class PhraseSearch {
+	
+	public String[] search(String phrase, Map<String, List<Index>> fullInvertedIndex, String[] documentList) throws Exception{
+		if (phrase != null && !phrase.trim().equals("")){
+			List<DataIndex> sortDataIndex = sortInvertedIndex(fullInvertedIndex, phrase);
+			for (int i=0; i<sortDataIndex.size(); i++){
+				List<Index> indexList = sortDataIndex.get(i).getIndexList();
+				for (int j=0; j<indexList.size(); j++){
+					Index index = indexList.get(j);
+				}
+				
+			}
+//			String[] splitPhrase = phrase.split(" ");
+//			for (int i=0; i<splitPhrase.length; i++){
+//				List<Index> listIndex = fullInvertedIndex.get(splitPhrase[i]);
+//				for (int j=0; j<listIndex.size();j++){
+//					
+//				}
+//			}
+		}else {
+			throw new Exception("The phrase can't be empty");
+		}
+		return new String[3];
+	}
+	
+	private boolean isThereConsecutive(){
+		
+		return false;
+	}
+	
+	private List<DataIndex> sortInvertedIndex(Map<String, List<Index>> fullInvertedIndex, String phrase){
+		List<DataIndex> sortDataIndex = new ArrayList<DataIndex>();
+		for (String word : phrase.split(" ")){
+			List<Index> listIndex = fullInvertedIndex.get(word);
+			if (listIndex != null){
+				DataIndex dataIndex = new DataIndex(word, listIndex);
+				sortDataIndex.add(dataIndex);
+			}
+		}
+		return sortDataIndex;
+	}
+
+}

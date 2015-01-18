@@ -1,0 +1,8 @@
+package com.talos.invertedindex.datastructure;
+
+public class Index {
+	
+	private int idDocument;
+	private int wordLocation;
+
+}

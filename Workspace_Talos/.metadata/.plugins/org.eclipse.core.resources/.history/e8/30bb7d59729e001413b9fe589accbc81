@@ -1,0 +1,5 @@
+package com.talos.invertedindex.datastructure;
+
+public class PhraseSearch {
+
+}

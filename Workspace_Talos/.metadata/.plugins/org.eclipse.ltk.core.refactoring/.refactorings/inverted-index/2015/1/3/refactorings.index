@@ -1,0 +1,16 @@
+1421511125383	Rename type 'App'
+1421511704927	Rename package 'com.talos.invertedindex.datatypes'
+1421514757036	Rename local variable 'i'
+1421514771621	Rename local variable 'j'
+1421517469345	Move compilation unit
+1421517493397	Rename field 'phraseList'
+1421517505505	Rename local variable 'phraseList'
+1421517535775	Rename local variable 'phraseList'
+1421517566464	Rename local variable 'indexPhrase'
+1421517576039	Rename local variable 'indexWord'
+1421525222050	Rename local variable 'sortdataIndex'
+1421536020632	Extract method 'ocurrenceForOnWord'
+1421542785629	Delete element
+1421542842362	Rename type 'AppTest'
+1421545547668	Rename type 'ArrayFunction'
+1421545789807	Rename method 'deletSpecialCharacters'

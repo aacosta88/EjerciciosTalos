@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="InvertedIndexTest" project="inverted-index" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.talos.invertedindex.InvertedIndexTest" time="0.016">
+    <testcase name="searchOnlyOneWord" classname="com.talos.invertedindex.InvertedIndexTest" time="0.016"/>
+  </testsuite>
+</testrun>
